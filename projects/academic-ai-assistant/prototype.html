@@ -1,0 +1,173 @@
+---
+layout: default
+title: 学术论文AI搜索助手 - 原型图
+---
+
+<div class="project-doc">
+  <h1>学术论文AI搜索助手 - 原型图</h1>
+  
+  <div class="doc-nav">
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/">项目主页</a>
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/prototype">原型图</a>
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/prd">PRD文档</a>
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/user-research">用户研究与需求分析</a>
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/technical-architecture">技术架构图</a>
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/development-log">开发过程记录</a>
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/demo">Demo展示</a>
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/competition-analysis">竞品分析</a>
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/product-thinking">产品思考与迭代日志</a>
+    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/future-plans">未来规划</a>
+  </div>
+  
+  <div class="doc-content">
+    <h2>整体架构</h2>
+    <p>学术论文AI搜索助手采用简洁直观的用户界面，主要包含以下几个核心页面：</p>
+    <ol>
+      <li><strong>主页/搜索页</strong>：用户可以输入搜索关键词，选择搜索范围和筛选条件</li>
+      <li><strong>搜索结果页</strong>：展示搜索结果，支持排序和进一步筛选</li>
+      <li><strong>论文详情页</strong>：展示论文的详细信息，包括摘要、作者、发表期刊等</li>
+      <li><strong>AI分析页</strong>：展示AI对论文的分析结果，包括核心观点、研究方法、创新点等</li>
+      <li><strong>个人中心</strong>：用户可以查看搜索历史、保存的论文等</li>
+    </ol>
+    
+    <h2>页面原型</h2>
+    
+    <h3>1. 主页/搜索页</h3>
+    <p><img src="https://via.placeholder.com/800x600?text=学术论文AI搜索助手-主页" alt="主页原型" style="max-width: 100%;"></p>
+    <p><strong>功能点：</strong></p>
+    <ul>
+      <li>搜索框：支持关键词输入</li>
+      <li>高级搜索选项：可以选择搜索范围（标题、摘要、全文）、时间范围、学科领域等</li>
+      <li>热门搜索：展示当前热门的搜索关键词</li>
+      <li>最近搜索：展示用户最近的搜索历史</li>
+    </ul>
+    
+    <h3>2. 搜索结果页</h3>
+    <p><img src="https://via.placeholder.com/800x600?text=学术论文AI搜索助手-搜索结果页" alt="搜索结果页原型" style="max-width: 100%;"></p>
+    <p><strong>功能点：</strong></p>
+    <ul>
+      <li>结果列表：展示搜索结果，包括论文标题、作者、发表年份、期刊、摘要等</li>
+      <li>排序选项：按相关性、发表时间、引用次数等排序</li>
+      <li>筛选选项：按学科领域、发表期刊、作者等筛选</li>
+      <li>批量操作：可以批量保存、下载论文</li>
+    </ul>
+    
+    <h3>3. 论文详情页</h3>
+    <p><img src="https://via.placeholder.com/800x600?text=学术论文AI搜索助手-论文详情页" alt="论文详情页原型" style="max-width: 100%;"></p>
+    <p><strong>功能点：</strong></p>
+    <ul>
+      <li>论文基本信息：标题、作者、发表期刊、发表时间、引用次数等</li>
+      <li>摘要：论文摘要内容</li>
+      <li>全文链接：提供论文全文的链接</li>
+      <li>引用格式：生成多种引用格式</li>
+      <li>相关论文推荐：基于当前论文推荐相关的论文</li>
+    </ul>
+    
+    <h3>4. AI分析页</h3>
+    <p><img src="https://via.placeholder.com/800x600?text=学术论文AI搜索助手-AI分析页" alt="AI分析页原型" style="max-width: 100%;"></p>
+    <p><strong>功能点：</strong></p>
+    <ul>
+      <li>核心观点提取：AI提取的论文核心观点</li>
+      <li>研究方法分析：AI对研究方法的分析</li>
+      <li>创新点识别：AI识别的论文创新点</li>
+      <li>技术路线图：AI生成的论文技术路线图</li>
+      <li>相关研究领域：AI推荐的相关研究领域</li>
+    </ul>
+    
+    <h3>5. 个人中心</h3>
+    <p><img src="https://via.placeholder.com/800x600?text=学术论文AI搜索助手-个人中心" alt="个人中心原型" style="max-width: 100%;"></p>
+    <p><strong>功能点：</strong></p>
+    <ul>
+      <li>搜索历史：用户的搜索历史记录</li>
+      <li>保存的论文：用户保存的论文列表</li>
+      <li>阅读笔记：用户对论文的阅读笔记</li>
+      <li>个性化设置：用户可以设置搜索偏好、通知等</li>
+    </ul>
+    
+    <h2>交互流程</h2>
+    <ol>
+      <li>用户在主页输入搜索关键词，点击搜索按钮</li>
+      <li>系统展示搜索结果列表</li>
+      <li>用户可以对结果进行排序和筛选</li>
+      <li>用户点击感兴趣的论文，进入论文详情页</li>
+      <li>用户可以查看论文的详细信息，并点击"AI分析"按钮查看AI分析结果</li>
+      <li>用户可以将论文保存到个人中心</li>
+      <li>用户可以在个人中心查看保存的论文和搜索历史</li>
+    </ol>
+    
+    <h2>设计原则</h2>
+    <ol>
+      <li><strong>简洁直观</strong>：界面设计简洁明了，用户可以快速找到所需功能</li>
+      <li><strong>响应式设计</strong>：支持不同设备的访问，包括桌面端、平板和手机</li>
+      <li><strong>个性化体验</strong>：根据用户的搜索历史和偏好，提供个性化的推荐</li>
+      <li><strong>高效搜索</strong>：提供多种搜索和筛选选项，帮助用户快速找到相关论文</li>
+      <li><strong>智能分析</strong>：利用AI技术，为用户提供深度的论文分析</li>
+    </ol>
+  </div>
+</div>
+
+<style>
+.project-doc {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.doc-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.doc-nav a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.doc-nav a:hover {
+  background-color: #f0f0f0;
+  color: #0066cc;
+}
+
+.doc-content h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+}
+
+.doc-content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.doc-content p {
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.doc-content ul,
+.doc-content ol {
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.doc-content li {
+  margin-bottom: 8px;
+}
+
+.doc-content strong {
+  color: #333;
+}
+</style>
