@@ -13,6 +13,14 @@ permalink: /projects/
       <span class="tech">Python, OpenAI API, NLP</span>
     </div>
   </div>
+  <div class="project-card">
+    <h2><a href="{{ site.baseurl }}/projects/academic-ai-assistant/">学术论文AI搜索助手</a></h2>
+    <p>一个基于人工智能技术的学术论文搜索和分析工具，帮助研究人员更高效地查找、分析和理解学术论文。</p>
+    <div class="project-meta">
+      <span class="status">开发中</span>
+      <span class="tech">Python, React, AI, NLP</span>
+    </div>
+  </div>
 </div>
 
 <style>
