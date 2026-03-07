@@ -16,10 +16,6 @@ permalink: /about/
 
 我相信好的产品经理是"用户的代言人"，也是"技术的翻译者"。欢迎[联系我](mailto:3494366955@qq.com)，一起探索AI产品的无限可能。
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
 ### Contact me
 
 [3494366955@qq.com](mailto:3494366955@qq.com)
