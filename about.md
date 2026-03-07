@@ -4,7 +4,17 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+我是刘蜜，北京师范大学应用统计专业（2027届）研究生，数据科学与管理方向，正在积极寻找AI产品经理实习机会。
+
+我对AI产品充满热情，相信技术应该服务于真实的人的需求。通过个人项目，我积累了从0到1的产品设计经验：
+
+- 主导设计学术AI搜索工具，聚焦学者和研究生群体，通过RAG技术实现实时信息检索+AI总结，输出PRD及高保真原型。
+
+- 设计AI驱动的周末决策社区，帮助年轻人解决"周末去哪"的决策焦虑，完成用户调研、竞品分析到功能设计的完整流程
+
+我具备用户洞察、产品设计、数据分析和AI技术理解的综合能力，熟练使用XMind、Axure等工具，了解大模型API调用和Prompt Engineering。
+
+我相信好的产品经理是"用户的代言人"，也是"技术的翻译者"。欢迎[联系我](mailto:3494366955@qq.com)，一起探索AI产品的无限可能。
 
 ### More Information
 
@@ -12,4 +22,4 @@ A place to include any other types of information that you'd like to include abo
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[3494366955@qq.com](mailto:3494366955@qq.com)
