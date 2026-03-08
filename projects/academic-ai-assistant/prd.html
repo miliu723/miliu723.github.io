@@ -3,457 +3,716 @@ layout: default
 title: 学术论文AI搜索助手 - PRD文档
 ---
 
-<div class="project-doc">
-  <h1>学术论文AI搜索助手 - PRD文档</h1>
-  
-  <div class="doc-nav">
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/">项目主页</a>
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/prototype">原型图</a>
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/prd">PRD文档</a>
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/user-research">用户研究与需求分析</a>
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/technical-architecture">技术架构图</a>
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/development-log">开发过程记录</a>
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/demo">Demo展示</a>
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/competition-analysis">竞品分析</a>
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/product-thinking">产品思考与迭代日志</a>
-    <a href="{{ site.baseurl }}/projects/academic-ai-assistant/future-plans">未来规划</a>
-  </div>
-  
-  <div class="doc-content">
-    <h2>1. 产品概览</h2>
-    <p>学术论文AI搜索助手是一款基于人工智能技术的学术论文搜索和分析工具，旨在帮助研究人员、学生和教育工作者更高效地查找、分析和理解学术论文。</p>
-    <p>- 该产品解决了传统学术搜索工具存在的搜索结果不精准、分析能力弱、用户体验差等问题。</p>
-    <p>- 产品价值在于提高学术研究的效率和质量，帮助用户快速获取有价值的学术信息，并通过AI分析深入理解论文内容。</p>
-    
-    <h2>2. 核心功能</h2>
-    
-    <h3>2.1 用户角色</h3>
-    <table class="api-table">
-      <thead>
-        <tr>
-          <th>角色</th>
-          <th>注册方式</th>
-          <th>核心权限</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>普通用户</td>
-          <td>邮箱注册</td>
-          <td>基础搜索、AI分析、保存论文</td>
-        </tr>
-        <tr>
-          <td>高级用户</td>
-          <td>付费升级</td>
-          <td>无限制搜索、高级AI分析、批量操作</td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <h3>2.2 功能模块</h3>
-    <p>我们的学术论文AI搜索助手包含以下主要页面：</p>
-    <ol>
-      <li><strong>主页</strong>：搜索框、高级搜索选项、热门搜索、最近搜索</li>
-      <li><strong>搜索结果页</strong>：结果列表、排序选项、筛选选项、批量操作</li>
-      <li><strong>论文详情页</strong>：论文基本信息、摘要、全文链接、引用格式、相关论文推荐</li>
-      <li><strong>AI分析页</strong>：核心观点提取、研究方法分析、创新点识别、技术路线图、相关研究领域</li>
-      <li><strong>个人中心</strong>：搜索历史、保存的论文、阅读笔记、个性化设置</li>
-    </ol>
-    
-    <h3>2.3 页面详情</h3>
-    <table class="api-table">
-      <thead>
-        <tr>
-          <th>页面名称</th>
-          <th>模块名称</th>
-          <th>功能描述</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>主页</td>
-          <td>搜索框</td>
-          <td>支持关键词输入，提供搜索建议</td>
-        </tr>
-        <tr>
-          <td>主页</td>
-          <td>高级搜索选项</td>
-          <td>可以选择搜索范围、时间范围、学科领域等</td>
-        </tr>
-        <tr>
-          <td>主页</td>
-          <td>热门搜索</td>
-          <td>展示当前热门的搜索关键词</td>
-        </tr>
-        <tr>
-          <td>主页</td>
-          <td>最近搜索</td>
-          <td>展示用户最近的搜索历史</td>
-        </tr>
-        <tr>
-          <td>搜索结果页</td>
-          <td>结果列表</td>
-          <td>展示搜索结果，包括论文标题、作者、发表年份、期刊、摘要等</td>
-        </tr>
-        <tr>
-          <td>搜索结果页</td>
-          <td>排序选项</td>
-          <td>按相关性、发表时间、引用次数等排序</td>
-        </tr>
-        <tr>
-          <td>搜索结果页</td>
-          <td>筛选选项</td>
-          <td>按学科领域、发表期刊、作者等筛选</td>
-        </tr>
-        <tr>
-          <td>搜索结果页</td>
-          <td>批量操作</td>
-          <td>可以批量保存、下载论文</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>论文基本信息</td>
-          <td>展示标题、作者、发表期刊、发表时间、引用次数等</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>摘要</td>
-          <td>展示论文摘要内容</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>全文链接</td>
-          <td>提供论文全文的链接</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>引用格式</td>
-          <td>生成多种引用格式</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>相关论文推荐</td>
-          <td>基于当前论文推荐相关的论文</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>核心观点提取</td>
-          <td>AI提取的论文核心观点</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>研究方法分析</td>
-          <td>AI对研究方法的分析</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>创新点识别</td>
-          <td>AI识别的论文创新点</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>技术路线图</td>
-          <td>AI生成的论文技术路线图</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>相关研究领域</td>
-          <td>AI推荐的相关研究领域</td>
-        </tr>
-        <tr>
-          <td>个人中心</td>
-          <td>搜索历史</td>
-          <td>展示用户的搜索历史记录</td>
-        </tr>
-        <tr>
-          <td>个人中心</td>
-          <td>保存的论文</td>
-          <td>展示用户保存的论文列表</td>
-        </tr>
-        <tr>
-          <td>个人中心</td>
-          <td>阅读笔记</td>
-          <td>展示用户对论文的阅读笔记</td>
-        </tr>
-        <tr>
-          <td>个人中心</td>
-          <td>个性化设置</td>
-          <td>用户可以设置搜索偏好、通知等</td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <h2>3. Core Process</h2>
-    
-    <h3>用户搜索流程</h3>
-    <ol>
-      <li>用户进入主页，在搜索框中输入关键词</li>
-      <li>用户可以选择高级搜索选项，设置搜索范围、时间范围、学科领域等</li>
-      <li>用户点击搜索按钮，系统展示搜索结果</li>
-      <li>用户可以对结果进行排序和筛选</li>
-      <li>用户点击感兴趣的论文，进入论文详情页</li>
-      <li>用户可以查看论文的详细信息，并点击"AI分析"按钮查看AI分析结果</li>
-      <li>用户可以将论文保存到个人中心</li>
-    </ol>
-    
-    <h3>个人中心流程</h3>
-    <ol>
-      <li>用户登录个人中心</li>
-      <li>用户可以查看搜索历史、保存的论文、阅读笔记</li>
-      <li>用户可以管理保存的论文，添加阅读笔记</li>
-      <li>用户可以修改个性化设置</li>
-    </ol>
-    
-    <div class="flow-chart">
-      <pre>
-用户 → 主页 → 搜索结果页 → 论文详情页 → AI分析页
-                      ↓                 ↓
-                      → 个人中心 ←
-      </pre>
-    </div>
-    
-    <h2>4. 用户接口设计</h2>
-    
-    <h3>4.1 设计风格</h3>
-    <ul>
-      <li><strong>主色</strong>：蓝色 #1890ff</li>
-      <li><strong>辅色</strong>：白色 #ffffff、浅灰 #f5f5f5、深灰 #333333</li>
-      <li><strong>按钮样式</strong>：圆角矩形，有悬停效果</li>
-      <li><strong>字体</strong>：系统默认字体，标题 18px，正文 14px</li>
-      <li><strong>布局样式</strong>：响应式布局，卡片式设计，有适当的间距和阴影</li>
-      <li><strong>图标样式</strong>：线性图标，简洁现代</li>
-    </ul>
-    
-    <h3>4.2 页面设计概览</h3>
-    <table class="api-table">
-      <thead>
-        <tr>
-          <th>页面名称</th>
-          <th>模块名称</th>
-          <th>UI元素</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>主页</td>
-          <td>搜索框</td>
-          <td>居中大搜索框，支持输入建议</td>
-        </tr>
-        <tr>
-          <td>主页</td>
-          <td>高级搜索选项</td>
-          <td>下拉菜单，包含多个选项</td>
-        </tr>
-        <tr>
-          <td>主页</td>
-          <td>热门搜索</td>
-          <td>标签云形式展示</td>
-        </tr>
-        <tr>
-          <td>主页</td>
-          <td>最近搜索</td>
-          <td>列表形式展示</td>
-        </tr>
-        <tr>
-          <td>搜索结果页</td>
-          <td>结果列表</td>
-          <td>卡片式设计，包含论文基本信息</td>
-        </tr>
-        <tr>
-          <td>搜索结果页</td>
-          <td>排序选项</td>
-          <td>下拉菜单</td>
-        </tr>
-        <tr>
-          <td>搜索结果页</td>
-          <td>筛选选项</td>
-          <td>侧边栏，包含多个筛选条件</td>
-        </tr>
-        <tr>
-          <td>搜索结果页</td>
-          <td>批量操作</td>
-          <td>顶部工具栏，包含批量操作按钮</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>论文基本信息</td>
-          <td>标题、作者、期刊等信息，排版清晰</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>摘要</td>
-          <td>文本区域，可展开/收起</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>全文链接</td>
-          <td>按钮，点击跳转到全文</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>引用格式</td>
-          <td>下拉菜单，选择不同引用格式</td>
-        </tr>
-        <tr>
-          <td>论文详情页</td>
-          <td>相关论文推荐</td>
-          <td>卡片式设计，展示推荐论文</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>核心观点提取</td>
-          <td>文本区域，突出显示核心观点</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>研究方法分析</td>
-          <td>文本区域，包含图表</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>创新点识别</td>
-          <td>列表形式，突出显示创新点</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>技术路线图</td>
-          <td>图表展示</td>
-        </tr>
-        <tr>
-          <td>AI分析页</td>
-          <td>相关研究领域</td>
-          <td>标签云形式展示</td>
-        </tr>
-        <tr>
-          <td>个人中心</td>
-          <td>搜索历史</td>
-          <td>列表形式，包含搜索关键词和时间</td>
-        </tr>
-        <tr>
-          <td>个人中心</td>
-          <td>保存的论文</td>
-          <td>列表形式，包含论文标题和保存时间</td>
-        </tr>
-        <tr>
-          <td>个人中心</td>
-          <td>阅读笔记</td>
-          <td>文本编辑器，支持富文本</td>
-        </tr>
-        <tr>
-          <td>个人中心</td>
-          <td>个性化设置</td>
-          <td>表单形式，包含多个设置选项</td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <h3>4.3 自适应</h3>
-    <ul>
-      <li>桌面端：完整功能，多列布局</li>
-      <li>平板端：保持核心功能，适当调整布局</li>
-      <li>移动端：简化功能，单列布局，优化触摸交互</li>
-    </ul>
-  </div>
-</div>
-
-<style>
-.project-doc {
-  max-width: 800px;
-  margin: 0 auto;
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Untitled</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
 }
 
-.doc-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eaeaea;
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
 }
 
-.doc-nav a {
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: #333;
-  text-decoration: none;
-  background-color: #f9f9f9;
-  transition: all 0.3s ease;
-  font-size: 14px;
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
 }
 
-.doc-nav a:hover {
-  background-color: #f0f0f0;
-  color: #0066cc;
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
 }
 
-.doc-content h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #333;
-  border-bottom: 1px solid #eaeaea;
-  padding-bottom: 10px;
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
 }
 
-.doc-content h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #444;
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
 }
 
-.doc-content p {
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 20px;
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
 }
 
-.doc-content ul,
-.doc-content ol {
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 20px;
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
 }
 
-.doc-content li {
-  margin-bottom: 8px;
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
 }
 
-.doc-content strong {
-  color: #333;
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
 }
 
-.api-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  font-size: 14px;
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
 }
 
-.api-table th,
-.api-table td {
-  padding: 8px;
-  border: 1px solid #eaeaea;
-  text-align: left;
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
 }
 
-.api-table th {
-  background-color: #f9f9f9;
-  font-weight: bold;
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
 }
 
-.api-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
 }
 
-.flow-chart {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 5px;
-  margin-bottom: 20px;
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
 }
 
-.flow-chart pre {
-  font-family: monospace;
-  white-space: pre;
-  margin: 0;
+mark {
+	background-color: transparent;
 }
-</style>
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="31d37623-b814-80fa-92ab-cfa2a9ea1ec2" class="page sans"><header><h1 class="page-title" dir="auto"></h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h1 id="31d37623-b814-80eb-828d-c46789f282bf" class="">ScholarAI 产品需求文档（PRD）</h1></div><div style="display:contents" dir="auto"><h2 id="31d37623-b814-805e-a32b-c78a1751d11f" class="">一、产品概述</h2></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-8052-86d7-f182fb999f06" class="">1.1 产品定位</h3></div><div style="display:contents" dir="auto"><p id="31d37623-b814-808c-8cf5-d6209b8a0fcf" class="">ScholarAI 是一款面向科研人员的智能学术文献管理与分析工具，基于2026年最新大语言模型内核，聚焦解决科研人员文献检索效率低、解读难度大、管理碎片化等核心痛点，实现从文献检索、智能解读、对话问答到库管理的全流程学术工作流优化。</p></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80e1-ade5-feb0987a3f71" class="">1.2 核心价值</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8035-b601-f7bcf7937332" class="bulleted-list"><li style="list-style-type:disc">效率提升：将传统数天的科研调研周期缩短至数分钟</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80f0-9eb6-f2066a90c0db" class="bulleted-list"><li style="list-style-type:disc">深度解读：利用LLM对文献进行结构化、通俗化的智能分析</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80d7-921f-ea4acdb79e69" class="bulleted-list"><li style="list-style-type:disc">全流程管理：覆盖文献检索、存储、解读、问答、导出的完整闭环</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-800b-8086-f45b745d0391" class="bulleted-list"><li style="list-style-type:disc">个性化适配：支持多模型选择、总结风格自定义等个性化配置</li></ul></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-8075-be24-c5300533e5f2" class="">1.3 目标用户</h3></div><div style="display:contents" dir="auto"><p id="31d37623-b814-808e-8d01-e4ba62a06223" class="">高校科研人员、硕博研究生、企业研发人员等需要高频检索、解读、管理学术文献的人群。</p></div><div style="display:contents" dir="auto"><h2 id="31d37623-b814-804b-889c-e5e88aeb8a26" class="">二、核心功能模块</h2></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-803c-9177-ff06cb51c3eb" class="">2.1 首页</h3></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80b0-867a-dc62cedac10f" class="">2.1.1 功能定位</h3></div><div style="display:contents" dir="auto"><p id="31d37623-b814-80fa-978b-ee7fb8d882d3" class="">产品核心入口，承载搜索功能与核心能力展示，引导用户快速触达核心功能。</p></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80c7-b50a-c024637ada61" class="">2.1.2 核心需求</h3></div><div style="display:contents" dir="ltr"><table id="31d37623-b814-8070-8257-c1e438c9a0f5" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8041-8f84-d555553581c6"><th id="SNPZ" class="simple-table-header-color simple-table-header">需求ID</th><th id="U?_V" class="simple-table-header-color simple-table-header">需求描述</th><th id="x?:p" class="simple-table-header-color simple-table-header">优先级</th><th id="auvN" class="simple-table-header-color simple-table-header">交互细节</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80f4-913a-dd645fc7f30e"><td id="SNPZ" class="">IND-001</td><td id="U?_V" class="">顶部导航栏展示</td><td id="x?:p" class="">高</td><td id="auvN" class="">1. 固定悬浮，背景半透明毛玻璃效果（bg-white/80 backdrop-blur-md）&lt;br&gt;2. 包含产品Logo、首页/我的文献库/偏好设置导航项，当前页高亮（蓝色文字+下边框）&lt;br&gt;3. 右侧展示用户头像占位符</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80b3-b566-c5651957bbec"><td id="SNPZ" class="">IND-002</td><td id="U?_V" class="">核心搜索功能</td><td id="x?:p" class="">最高</td><td id="auvN" class="">1. 巨型搜索框，支持输入论文标题/关键词/作者/DOI&lt;br&gt;2. 回车或点击「AI深度检索」按钮跳转至结果页&lt;br&gt;3. 聚焦时边框高亮为蓝色，左侧常驻搜索图标</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80af-a090-f87884c571f2"><td id="SNPZ" class="">IND-003</td><td id="U?_V" class="">核心能力卡片展示</td><td id="x?:p" class="">高</td><td id="auvN" class="">1. 三栏布局（响应式，移动端单列）：上传PDF解析、文献对比分析、生成文献综述&lt;br&gt;2. 卡片hover效果：边框变色+阴影放大+图标缩放&lt;br&gt;3. 卡片底部引导文字带hover平移动画</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8040-bda0-e7d0b9b159b9"><td id="SNPZ" class="">IND-004</td><td id="U?_V" class="">底部信息展示</td><td id="x?:p" class="">中</td><td id="auvN" class="">1. 展示核心数据：每日更新论文数、入驻实验室数、支持期刊系列&lt;br&gt;2. 底部版权信息固定展示</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-806f-93f9-c8b5f1c01561" class="">2.1.3 视觉要求</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8078-a2b4-fb682bf87de3" class="bulleted-list"><li style="list-style-type:disc">整体采用浅灰底色+白色卡片，主色调为蓝色（#1E40AF）、靛蓝、祖母绿辅助色</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8098-b75e-d695d03e67db" class="bulleted-list"><li style="list-style-type:disc">搜索框带超大圆角（rounded-3xl）与重阴影，突出核心入口</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80b8-8f8b-e270cdd66613" class="bulleted-list"><li style="list-style-type:disc">卡片采用渐变背景+轻阴影，hover态增强视觉反馈</li></ul></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-803e-b81f-faba0ddc6092" class="">2.2 搜索结果页</h3></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80eb-9736-cec0ff27caab" class="">2.2.1 功能定位</h3></div><div style="display:contents" dir="auto"><p id="31d37623-b814-8041-a61d-c33b7cf4e0b1" class="">承接首页搜索请求，展示AI智能排序后的文献列表，支持多维度筛选、AI总结预览、快速收藏/查看详情等操作，是连接搜索入口与论文详情的核心页面。</p></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80c2-9ed2-cde60812c5e6" class="">2.2.2 核心需求</h3></div><div style="display:contents" dir="ltr"><table id="31d37623-b814-800a-846f-c48823d5a52e" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8066-8c5f-ddfd4791ef7a"><th id="h[YF" class="simple-table-header-color simple-table-header">需求ID</th><th id="?LJ|" class="simple-table-header-color simple-table-header">需求描述</th><th id="pc?C" class="simple-table-header-color simple-table-header">优先级</th><th id="_l}G" class="simple-table-header-color simple-table-header">交互细节</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80ea-9710-c6f444e1fee0"><td id="h[YF" class="">RES-001</td><td id="?LJ|" class="">顶部搜索回显与导航</td><td id="pc?C" class="">最高</td><td id="_l}G" class="">1. 左侧返回按钮（点击跳转首页）+ 搜索框回显用户输入关键词&lt;br&gt;2. 搜索框支持重新输入、回车二次检索&lt;br&gt;3. 右侧展示检索耗时（例：检索耗时 0.8s）+ 结果总数（例：共找到 42 篇相关文献）&lt;br&gt;4. 整体固定悬浮，背景白色</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-805e-9746-e5496859915a"><td id="h[YF" class="">RES-002</td><td id="?LJ|" class="">多维度筛选栏</td><td id="pc?C" class="">高</td><td id="_l}G" class="">1. 横向滚动布局（移动端可滑动），包含以下筛选项：&lt;br&gt; - 时间维度：近1年 / 近3年 / 近5年 / 全部&lt;br&gt; - 期刊等级：SCI / 核心 / 普通&lt;br&gt; - 文献类型：期刊 / 会议 / 学位论文&lt;br&gt; - 排序方式：相关度（默认）/ 发表时间 / 被引量&lt;br&gt;2. 选中项高亮（蓝色背景+白色文字），未选中项hover浅灰背景&lt;br&gt;3. 筛选条件变更后，列表实时刷新（带加载动画）</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80cd-ab88-ef3ae5b6cde2"><td id="h[YF" class="">RES-003</td><td id="?LJ|" class="">AI智能排序提示</td><td id="pc?C" class="">中</td><td id="_l}G" class="">1. 筛选栏下方展示「AI已智能排序」提示条（蓝色左侧边框+AI图标）&lt;br&gt;2. 提示文字：“基于您的搜索意图，AI已优先展示高相关度、高影响力文献”&lt;br&gt;3. 点击提示条右侧「了解排序规则」可展开说明弹窗</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8047-892f-efbbd64634e8"><td id="h[YF" class="">RES-004</td><td id="?LJ|" class="">文献列表卡片展示</td><td id="pc?C" class="">最高</td><td id="_l}G" class="">1. 每篇文献为独立白色卡片，hover态：阴影放大+轻微上浮&lt;br&gt;2. 卡片内容包含：&lt;br&gt; - 标题（加粗大号字体，点击跳转详情页）&lt;br&gt; - 元数据：作者 + 期刊 + 发表年份 + DOI（小号浅灰字体）&lt;br&gt; - AI核心总结：2行截断展示，前缀标注「AI总结：」（蓝色文字）&lt;br&gt; - 标签：核心贡献/实验数据/方法论（彩色小标签）&lt;br&gt; - 操作按钮：收藏（空心/实心星星图标）+ 查看详情（蓝色按钮）&lt;br&gt;3. 卡片底部展示被引量/下载量（带对应图标）&lt;br&gt;4. 列表支持懒加载（滚动到底部自动加载下一页）</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8089-9502-c0257d63e169"><td id="h[YF" class="">RES-005</td><td id="?LJ|" class="">空结果/无筛选结果提示</td><td id="pc?C" class="">中</td><td id="_l}G" class="">1. 无结果时展示：空状态插图 + 提示文字（例：未找到符合条件的文献）&lt;br&gt;2. 附带智能推荐关键词（例：您可能想找：Transformer 优化 / 大模型效率）&lt;br&gt;3. 推荐关键词点击可直接检索</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8084-ac97-f9356d15760a"><td id="h[YF" class="">RES-006</td><td id="?LJ|" class="">分页/懒加载交互</td><td id="pc?C" class="">中</td><td id="_l}G" class="">1. 桌面端：列表展示10篇/页，底部分页器（上一页/页码/下一页）&lt;br&gt;2. 移动端：懒加载（滚动到底部自动加载，带加载动效）&lt;br&gt;3. 加载中展示骨架屏占位，避免页面抖动</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-8066-bb4c-cc75b5a723b8" class="">2.2.3 视觉要求</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-802b-9f55-dfe5436696fb" class="bulleted-list"><li style="list-style-type:disc">筛选栏与列表之间用浅灰分隔线区分，视觉层级清晰</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8070-a5d1-ed9b0b79ab0a" class="bulleted-list"><li style="list-style-type:disc">文献卡片采用白色背景+轻阴影，间距统一（16px），圆角8px</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80c1-97cc-fde2a25f77d7" class="bulleted-list"><li style="list-style-type:disc">AI总结文本采用浅灰字体，与标题/元数据形成视觉区分</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8036-9816-ee080f5db949" class="bulleted-list"><li style="list-style-type:disc">标签颜色规范：核心贡献（蓝色）、实验数据（祖母绿）、方法论（琥珀色）</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-801c-b612-f0de6563f804" class="bulleted-list"><li style="list-style-type:disc">加载动画采用蓝色渐变转圈，位置居中</li></ul></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80b8-ae75-de60adaf43ba" class="">2.3 我的文献库</h3></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-8003-9156-f82d24a7826e" class="">2.3.1 功能定位</h3></div><div style="display:contents" dir="auto"><p id="31d37623-b814-80e1-bcf9-f61edf0dd3c1" class="">用户个人文献资产管理中心，支持文件夹分类、标签管理、批量操作、文献列表查看。</p></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80cb-a73c-ed8cc1539260" class="">2.3.2 核心需求</h3></div><div style="display:contents" dir="ltr"><table id="31d37623-b814-806c-bc46-ea357738f401" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8026-8f43-d47dd5be8b2b"><th id="&gt;&lt;Vv" class="simple-table-header-color simple-table-header">需求ID</th><th id="iGBg" class="simple-table-header-color simple-table-header">需求描述</th><th id="rt~{" class="simple-table-header-color simple-table-header">优先级</th><th id="bqMI" class="simple-table-header-color simple-table-header">交互细节</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="31d37623-b814-808b-90a9-d53368cdf72e"><td id="&gt;&lt;Vv" class="">LIB-001</td><td id="iGBg" class="">侧边栏文件夹管理</td><td id="rt~{" class="">高</td><td id="bqMI" class="">1. 固定宽度侧边栏，包含「新建文件夹」按钮（蓝色背景+阴影）&lt;br&gt;2. 文件夹列表展示名称+文献数量，选中项高亮（蓝色背景）&lt;br&gt;3. 标签云模块展示文献标签，小尺寸彩色标签样式</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-808a-952c-c1f3a7db2f71"><td id="&gt;&lt;Vv" class="">LIB-002</td><td id="iGBg" class="">顶部操作栏</td><td id="rt~{" class="">高</td><td id="bqMI" class="">1. 左侧：批量导出、AI生成综述、删除按钮&lt;br&gt;2. 右侧：搜索框（带左侧搜索图标）&lt;br&gt;3. 按钮hover态：背景色变化+过渡动画</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8029-a2b4-d10d2854b150"><td id="&gt;&lt;Vv" class="">LIB-003</td><td id="iGBg" class="">文献列表展示</td><td id="rt~{" class="">最高</td><td id="bqMI" class="">1. 表格布局，列包含：复选框、论文标题/元数据、AI标签、收藏时间、操作&lt;br&gt;2. 行hover效果：浅灰背景&lt;br&gt;3. 标题hover变色（蓝色），点击可跳转至详情页&lt;br&gt;4. AI标签采用彩色小标签样式（琥珀色/蓝色/祖母绿）</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8033-a227-ffb69f892181"><td id="&gt;&lt;Vv" class="">LIB-004</td><td id="iGBg" class="">批量操作支持</td><td id="rt~{" class="">中</td><td id="bqMI" class="">1. 复选框支持单选/全选&lt;br&gt;2. 批量导出、删除操作仅在选中文献时可用（需做状态交互）</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-808b-9b9c-c2513a5299c9" class="">2.3.3 视觉要求</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-805f-b386-f30e0f27aad3" class="bulleted-list"><li style="list-style-type:disc">整体白色背景为主，侧边栏与主内容区通过边框分隔</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80dd-a0ca-e6f48596be42" class="bulleted-list"><li style="list-style-type:disc">表格行高统一，文字层级清晰：标题粗体、元数据小号浅灰、时间戳等宽字体</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80d5-9d62-ea215d1c7f56" class="bulleted-list"><li style="list-style-type:disc">操作按钮采用线性图标，hover态变色</li></ul></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80e6-9743-dd85d6d70b40" class="">2.4 论文详情页</h3></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-809d-a0ac-d2d28bc5d17d" class="">2.4.1 功能定位</h3></div><div style="display:contents" dir="auto"><p id="31d37623-b814-802c-82c6-e7e8c22eca59" class="">单篇文献的深度解读页面，整合原文信息与AI智能分析，支持问答跳转、分享等操作。</p></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-8059-b54a-f64e93eb8ae4" class="">2.4.2 核心需求</h3></div><div style="display:contents" dir="ltr"><table id="31d37623-b814-8006-903a-e9b388073e50" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8076-ad19-d77c6c55c0c8"><th id=";}Mi" class="simple-table-header-color simple-table-header">需求ID</th><th id="p|_=" class="simple-table-header-color simple-table-header">需求描述</th><th id="P_zl" class="simple-table-header-color simple-table-header">优先级</th><th id="~QbJ" class="simple-table-header-color simple-table-header">交互细节</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8030-86cc-ed3f2e62b662"><td id=";}Mi" class="">DET-001</td><td id="p|_=" class="">顶部导航栏</td><td id="P_zl" class="">高</td><td id="~QbJ" class="">1. 左侧返回按钮+AI安全校验标签&lt;br&gt;2. 右侧：「问问此论文」按钮（跳转至对话页）+分享按钮&lt;br&gt;3. 按钮hover态：背景色变化+过渡动画</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8023-b060-ef95e7aa4987"><td id=";}Mi" class="">DET-002</td><td id="p|_=" class="">左侧原文信息区</td><td id="P_zl" class="">最高</td><td id="~QbJ" class="">1. 展示论文标题（超大号粗体）、作者、机构、发表时间&lt;br&gt;2. 摘要区标注「Abstract (摘要)」，斜体展示内容&lt;br&gt;3. 论文原文片段占位区，包含图表占位+「查看完整PDF」按钮</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80c3-9006-cf9f23a19d4b"><td id=";}Mi" class="">DET-003</td><td id="p|_=" class="">右侧AI解读区</td><td id="P_zl" class="">最高</td><td id="~QbJ" class="">1. 顶部蓝色渐变卡片：AI极速解读标题+说明&lt;br&gt;2. 四模块布局：研究目的、核心方法、实验结论、不足与局限&lt;br&gt;3. 每个模块带专属图标+彩色标题，内容区浅白背景&lt;br&gt;4. 底部操作按钮：生成思维导图、导出笔记、查看参考文献</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80bf-9de0-ceaaacda6732"><td id=";}Mi" class="">DET-004</td><td id="p|_=" class="">响应式适配</td><td id="P_zl" class="">中</td><td id="~QbJ" class="">移动端左右布局改为上下布局，优先展示AI解读区</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-8044-b126-e35e129f0da2" class="">2.4.3 视觉要求</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80a1-b873-eb58d4da7f08" class="bulleted-list"><li style="list-style-type:disc">左侧原文区白色背景，右侧AI解读区浅灰背景，形成视觉区分</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-808c-8ddd-c45f9dba7a39" class="bulleted-list"><li style="list-style-type:disc">AI解读模块采用不同主题色：研究目的（靛蓝）、核心方法（祖母绿）、实验结论（琥珀）、不足（红色）</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8020-85de-cdbdd61f09c2" class="bulleted-list"><li style="list-style-type:disc">关键按钮带阴影与圆角，增强点击欲望</li></ul></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-802e-99a6-fb0f3917f822" class="">2.5 AI对话问答页</h3></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80be-ab73-ca593150b738" class="">2.5.1 功能定位</h3></div><div style="display:contents" dir="auto"><p id="31d37623-b814-801c-b42b-ebe01aadeb4d" class="">基于单篇文献的智能问答交互页面，支持自然语言对话、快捷提问、公式解读。</p></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80e2-9954-df50f3634aa4" class="">2.5.2 核心需求</h3></div><div style="display:contents" dir="ltr"><table id="31d37623-b814-800a-8687-d2d4b9ae37ee" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="31d37623-b814-801f-af98-c133dba1e4e8"><th id="k&gt;qw" class="simple-table-header-color simple-table-header">需求ID</th><th id="O~OM" class="simple-table-header-color simple-table-header">需求描述</th><th id="cwep" class="simple-table-header-color simple-table-header">优先级</th><th id="knq]" class="simple-table-header-color simple-table-header">交互细节</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80f5-96ec-ca318a376ea2"><td id="k&gt;qw" class="">CHA-001</td><td id="O~OM" class="">顶部对话导航</td><td id="cwep" class="">高</td><td id="knq]" class="">1. 左侧返回按钮+关联论文标题（带下拉箭头）&lt;br&gt;2. 右侧展示作者与AI头像占位&lt;br&gt;3. 标题hover可展开论文信息</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80d5-9f4c-e89caa9e2d28"><td id="k&gt;qw" class="">CHA-002</td><td id="O~OM" class="">对话内容区</td><td id="cwep" class="">最高</td><td id="knq]" class="">1. AI消息：左侧头像+白色气泡；用户消息：右侧头像+蓝色气泡&lt;br&gt;2. 消息气泡自适应宽度（最大85%）&lt;br&gt;3. 支持公式展示（灰色背景+斜体）&lt;br&gt;4. AI消息带快捷提问按钮，点击可快速填充至输入框</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-80bb-a06a-ef4f8685ffe0"><td id="k&gt;qw" class="">CHA-003</td><td id="O~OM" class="">快捷提问栏</td><td id="cwep" class="">高</td><td id="knq]" class="">1. 横向滚动栏，包含简化解释、对比同类论文等快捷按钮&lt;br&gt;2. 按钮hover态：背景变蓝+文字变色&lt;br&gt;3. 移动端支持横向滑动</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-802e-8aca-fec08b0a25a1"><td id="k&gt;qw" class="">CHA-004</td><td id="O~OM" class="">输入交互</td><td id="cwep" class="">最高</td><td id="knq]" class="">1. 多行输入框，支持自动高度调整&lt;br&gt;2. 右侧发送按钮（蓝色圆形+阴影），hover缩放效果&lt;br&gt;3. 输入框聚焦时边框高亮&lt;br&gt;4. 底部提示文字：AI可能产生幻觉，需核实</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-8040-b096-f70ed2b5ef9b" class="">2.5.3 视觉要求</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8088-8e8c-e1c136f52b16" class="bulleted-list"><li style="list-style-type:disc">对话气泡采用大圆角（rounded-2xl），AI气泡浅白背景+边框，用户气泡蓝色背景+白色文字</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80d3-951a-e19fda7b38fa" class="bulleted-list"><li style="list-style-type:disc">快捷按钮采用浅灰背景，hover态变为浅蓝</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8093-aaa6-c319ba920cf5" class="bulleted-list"><li style="list-style-type:disc">输入区与内容区通过边框分隔，视觉层级清晰</li></ul></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80e3-8bc7-cd0fbe2b7cfe" class="">2.6 设置与关于页</h3></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-807c-99f7-e2c910aa2396" class="">2.6.1 功能定位</h3></div><div style="display:contents" dir="auto"><p id="31d37623-b814-801e-81b3-ccc6f7bfa93a" class="">产品配置与信息展示页面，支持模型选择、总结风格设置、系统信息查看。</p></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80b0-ba13-e67afac0865d" class="">2.6.2 核心需求</h3></div><div style="display:contents" dir="ltr"><table id="31d37623-b814-80f4-821e-f94d13df48ba" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8067-8ca1-c25a3970aad1"><th id="Bo|~" class="simple-table-header-color simple-table-header">需求ID</th><th id="rV_U" class="simple-table-header-color simple-table-header">需求描述</th><th id="d}R}" class="simple-table-header-color simple-table-header">优先级</th><th id="qzi@" class="simple-table-header-color simple-table-header">交互细节</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="31d37623-b814-805a-8cc0-ca38843f314d"><td id="Bo|~" class="">SET-001</td><td id="rV_U" class="">左侧功能菜单</td><td id="d}R}" class="">高</td><td id="qzi@" class="">1. 四栏菜单：模型设置（默认选中）、通知偏好、账户安全、关于项目&lt;br&gt;2. 选中项蓝色背景，未选中项hover浅灰背景&lt;br&gt;3. 菜单带图标+文字，图标与文字居中对齐</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8042-adc5-ed957a9db18c"><td id="Bo|~" class="">SET-002</td><td id="rV_U" class="">模型配置区</td><td id="d}R}" class="">最高</td><td id="qzi@" class="">1. 解析引擎选择：DeepSeek-V4（默认选中，不可改）、GPT-Next、通义千问3.5&lt;br&gt;2. 选中引擎边框高亮，未选中hover边框变色&lt;br&gt;3. AI总结风格下拉框，支持三种风格选择</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8032-99d4-e542a47acfec"><td id="Bo|~" class="">SET-003</td><td id="rV_U" class="">关于项目区</td><td id="d}R}" class="">中</td><td id="qzi@" class="">1. 深色背景卡片展示产品介绍&lt;br&gt;2. 展示版本号、底座技术、版权信息&lt;br&gt;3. 底部操作按钮：取消修改、应用更改</td></tr></div><div style="display:contents" dir="ltr"><tr id="31d37623-b814-8069-936d-ddc998fc2f54"><td id="Bo|~" class="">SET-004</td><td id="rV_U" class="">系统状态展示</td><td id="d}R}" class="">低</td><td id="qzi@" class="">顶部右侧展示系统状态：Optimal（最优）</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80f4-8b72-ca8b87e3761f" class="">2.6.3 视觉要求</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-802c-a054-eb1af960cded" class="bulleted-list"><li style="list-style-type:disc">左侧菜单与右侧内容区采用三栏/两栏布局（响应式）</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8006-92b5-da0aa6e0c066" class="bulleted-list"><li style="list-style-type:disc">模型选择卡片采用边框区分选中状态，默认推荐项带浅蓝背景</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80bb-b3a0-e93a8da305b6" class="bulleted-list"><li style="list-style-type:disc">关于项目区采用深色背景+浅色文字，增强视觉对比</li></ul></div><div style="display:contents" dir="auto"><h2 id="31d37623-b814-8076-b4a9-d4c7d519ad36" class="">三、非功能需求</h2></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-8042-9691-ed91ce72a876" class="">3.1 性能要求</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-803c-8c21-db614fb7a4f5" class="bulleted-list"><li style="list-style-type:disc">页面加载时间≤2s（首屏），交互响应≤300ms</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80b2-b42e-c1e0f617a307" class="bulleted-list"><li style="list-style-type:disc">支持1000+条文献列表的流畅滚动</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-809c-bbc4-fd098971bcb9" class="bulleted-list"><li style="list-style-type:disc">适配主流浏览器（Chrome/Firefox/Safari/Edge）及移动端浏览器</li></ul></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80e6-a21a-ef501447da8b" class="">3.2 兼容性要求</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-801f-a389-cb1c3810fcd7" class="bulleted-list"><li style="list-style-type:disc">响应式适配：移动端（320px+）、平板（768px+）、桌面端（1200px+）</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80ba-98f8-d9e688000666" class="bulleted-list"><li style="list-style-type:disc">适配不同屏幕密度（Retina/普通屏）</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8048-b087-c5edb699e709" class="bulleted-list"><li style="list-style-type:disc">图标采用矢量格式（Iconify），保证高清显示</li></ul></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-80b4-9280-ffe3810fa261" class="">3.3 体验要求</h3></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80eb-bc96-d7531a3872ac" class="bulleted-list"><li style="list-style-type:disc">所有交互元素（按钮/卡片/输入框）需有hover/active态反馈</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-8092-b469-cc98a92e10bc" class="bulleted-list"><li style="list-style-type:disc">页面跳转采用平滑过渡，避免生硬刷新</li></ul></div><div style="display:contents" dir="auto"><ul id="31d37623-b814-80c5-8442-f6617290c3ae" class="bulleted-list"><li style="list-style-type:disc">关键操作（如导出、删除）需有二次确认（后续迭代补充）</li></ul></div><div style="display:contents" dir="auto"><h2 id="31d37623-b814-8004-b67c-d30cd04c3940" class="">四、版本规划</h2></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-8079-9e3a-d7cb799796f3" class="">V1.0 核心功能（优先实现）</h3></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-80a5-a5a4-c397a724f41d" class="numbered-list" start="1"><li>首页搜索功能+核心能力展示</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8074-9aea-fcf480747c8c" class="numbered-list" start="2"><li>搜索结果页基础展示+筛选功能</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8062-a6b2-eeea9624cae2" class="numbered-list" start="3"><li>我的文献库基础列表展示+文件夹管理</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8027-8d94-ffb60a563811" class="numbered-list" start="4"><li>论文详情页原文展示+AI解读基础模块</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8092-afbe-c57cab740f7f" class="numbered-list" start="5"><li>设置页模型选择功能</li></ol></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-805e-b1a5-c540b8c977da" class="">V1.1 功能增强</h3></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-808d-8497-f866c646ed65" class="numbered-list" start="1"><li>搜索结果页AI智能排序+懒加载优化</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-804d-bc79-ee2b1a42b537" class="numbered-list" start="2"><li>AI对话问答页完整交互</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8094-974e-dc8c49ee06e1" class="numbered-list" start="3"><li>文献库批量操作（导出/删除）</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8065-aeca-e5faf548dcb2" class="numbered-list" start="4"><li>详情页思维导图生成/笔记导出</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-80d7-bc41-c5bf7c997598" class="numbered-list" start="5"><li>响应式适配优化</li></ol></div><div style="display:contents" dir="auto"><h3 id="31d37623-b814-809a-87f7-fb673b70c4fd" class="">V1.2 高级功能</h3></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-80e5-85f3-ea047aa30ebf" class="numbered-list" start="1"><li>PDF上传解析</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8043-93a3-f48dbac48739" class="numbered-list" start="2"><li>文献对比分析</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8082-ab13-fc248cd2d6f9" class="numbered-list" start="3"><li>自动生成文献综述</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-806c-99aa-fb8dd6155e29" class="numbered-list" start="4"><li>账户安全与通知偏好设置</li></ol></div><div style="display:contents" dir="auto"><h2 id="31d37623-b814-8091-8e58-ed5f690b508c" class="">五、备注</h2></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8019-a34f-f7fc3186a7b1" class="numbered-list" start="1"><li>所有页面基于Tailwind CSS构建，需保证样式类的规范性与复用性</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8091-9f1a-c6fe11618543" class="numbered-list" start="2"><li>图标统一使用Iconify，优先采用solar系列图标</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8028-a7cf-c6080a4e61f4" class="numbered-list" start="3"><li>文字层级：标题（粗体大号）、子标题（粗体中号）、正文（常规）、辅助文字（小号浅灰）</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="31d37623-b814-8039-ad06-ed5f060d49f5" class="numbered-list" start="4"><li>色彩体系：主色蓝色（#1E40AF），辅助色靛蓝（#4F46E5）、祖母绿（#10B981）、琥珀（#F59E0B）、红色（#EF4444），中性色以灰度系为主</li></ol></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
