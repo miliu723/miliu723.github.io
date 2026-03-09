@@ -1,0 +1,125 @@
+---
+layout: default
+title: AI Weekend
+---
+
+<div class="project-detail">
+  <h1>AI Weekend</h1>
+  
+  <div class="project-info">
+    <div class="status">开发中</div>
+    <div class="tech-stack">
+      <span>Python</span>
+      <span>React</span>
+      <span>AI</span>
+      <span>NLP</span>
+    </div>
+  </div>
+  
+  <div class="project-content">
+    <h2>项目文档</h2>
+    <ul class="doc-list">
+      <li><a href="{{ site.baseurl }}/projects/ai-weekend/prototype">原型图</a></li>
+      <li><a href="{{ site.baseurl }}/projects/ai-weekend/prd">PRD文档</a></li>
+    </ul>
+    
+    <h2>项目描述</h2>
+    <p>AI Weekend 是一款面向城市年轻群体的AI驱动型周末出行决策工具，聚焦解决用户周末出行规划耗时久、方案同质化、需求匹配度低的核心痛点。产品以自然语言理解和AI行程生成为核心，结合用户个性化偏好（预算、出行强度、兴趣标签、避坑需求），快速输出可直接落地的周末行程方案，并支持动态调整，覆盖“需求输入-AI生成-方案优化-行程执行”全流程，打造轻量化、个性化的周末出行规划体验。</p>
+    
+    <h2>核心功能</h2>
+    <ul>
+      <li><strong>智能需求解析与行程生成</strong>：支持用户通过自然语言/标签选择输入出行需求（城市、时长、人数、预算、兴趣），AI自动拆解需求并匹配目的地、交通、餐饮等资源，1分钟内生成结构化的时间轴式行程方案（含具体时间、地点、亮点、注意事项）。</li>
+      <li><strong>个性化方案微调</strong>：提供行程强度（特种兵/适中/躺平）、兴趣标签、预算偏好、避坑需求等可视化调整入口，用户可自定义修改后触发AI重新生成方案，适配动态需求。</li>
+      <li><strong>行程管理与偏好沉淀</strong>：个人中心支持查看历史行程、收藏方案、管理AI偏好库，基于用户行为反向优化推荐精准度，同时提供行程执行、打卡、分享等轻量化功能，形成出行决策闭环。</li>
+      <li><strong>轻量化交互体验</strong>：通过AI加载动效、可视化时间轴、标签化筛选等设计，降低用户操作成本，提升方案查看与调整的便捷性。</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.project-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.status {
+  background-color: #f0f0f0;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-stack span {
+  background-color: #e6f7ff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #1890ff;
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.doc-list li {
+  margin-bottom: 10px;
+}
+
+.doc-list a {
+  display: block;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.doc-list a:hover {
+  background-color: #f0f0f0;
+  color: #0066cc;
+}
+
+.project-content h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.project-content p {
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-content ul {
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-content li {
+  margin-bottom: 12px;
+}
+
+.project-content strong {
+  color: #333;
+}
+</style>

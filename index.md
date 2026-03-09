@@ -13,6 +13,14 @@ layout: default
       <span class="tech">Python, React, AI, NLP</span>
     </div>
   </div>
+  <div class="project-card">
+    <h3><a href="{{ site.baseurl }}/projects/ai-weekend/">AI Weekend</a></h3>
+    <p>一款面向城市年轻群体的AI驱动型周末出行决策工具，快速生成个性化周末行程方案，支持动态调整。</p>
+    <div class="project-meta">
+      <span class="status">开发中</span>
+      <span class="tech">Python, React, AI, NLP</span>
+    </div>
+  </div>
 </div>
 
 <h2>博客</h2>

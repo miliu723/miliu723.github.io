@@ -1,0 +1,215 @@
+---
+layout: default
+title: AI Weekend - PRD文档
+---
+
+<div class="project-doc">
+  <h1>AI Weekend - PRD文档</h1>
+  
+  <div class="doc-nav">
+    <a href="{{ site.baseurl }}/projects/ai-weekend/">项目主页</a>
+    <a href="{{ site.baseurl }}/projects/ai-weekend/prototype">原型图</a>
+    <a href="{{ site.baseurl }}/projects/ai-weekend/prd">PRD文档</a>
+  </div>
+  
+  <div class="doc-content">
+    <h2>AI Weekend - PRD文档</h2>
+    
+    <h3>一、产品概述</h3>
+    
+    <h4>1.1 产品定位</h4>
+    <p>AI Weekend是一款面向城市年轻群体的AI驱动型周末出行决策工具，聚焦解决用户周末出行规划耗时久、方案同质化、需求匹配度低的核心痛点，打造轻量化、个性化的周末出行规划体验。</p>
+    
+    <h4>1.2 核心价值</h4>
+    <ul>
+      <li>效率提升：将传统数小时的行程规划时间缩短至1分钟</li>
+      <li>个性化体验：基于用户偏好生成高度定制化的出行方案</li>
+      <li>全流程覆盖：从需求输入到行程执行的完整闭环</li>
+      <li>轻量化操作：降低用户操作成本，提升使用便捷性</li>
+    </ul>
+    
+    <h4>1.3 目标用户</h4>
+    <p>城市年轻群体，包括上班族、学生等需要在周末进行休闲出行的用户。</p>
+    
+    <h3>二、核心功能模块</h3>
+    
+    <h4>2.1 首页</h4>
+    <ul>
+      <li>产品介绍与核心价值展示</li>
+      <li>快速开始按钮</li>
+      <li>用户登录/注册入口</li>
+      <li>历史方案快捷访问</li>
+    </ul>
+    
+    <h4>2.2 需求输入页</h4>
+    <ul>
+      <li>自然语言输入框：支持用户用自然语言描述出行需求</li>
+      <li>标签选择：城市、时长、人数、预算范围、兴趣标签等</li>
+      <li>智能补全：根据用户输入提供相关建议</li>
+      <li>需求确认与提交</li>
+    </ul>
+    
+    <h4>2.3 方案生成页</h4>
+    <ul>
+      <li>AI生成进度展示</li>
+      <li>时间轴式行程方案展示</li>
+      <li>方案详情：时间、地点、活动、交通、餐饮等</li>
+      <li>方案调整入口</li>
+      <li>方案收藏与分享</li>
+    </ul>
+    
+    <h4>2.4 方案调整页</h4>
+    <ul>
+      <li>行程强度调整：特种兵/适中/躺平</li>
+      <li>兴趣标签调整</li>
+      <li>预算偏好调整</li>
+      <li>避坑需求设置</li>
+      <li>AI重新生成方案</li>
+    </ul>
+    
+    <h4>2.5 个人中心</h4>
+    <ul>
+      <li>历史行程管理</li>
+      <li>收藏方案管理</li>
+      <li>AI偏好库管理</li>
+      <li>用户设置</li>
+    </ul>
+    
+    <h3>三、非功能需求</h3>
+    
+    <h4>3.1 性能要求</h4>
+    <ul>
+      <li>页面加载时间≤2s</li>
+      <li>AI方案生成时间≤60s</li>
+      <li>支持同时1000+用户在线</li>
+    </ul>
+    
+    <h4>3.2 兼容性要求</h4>
+    <ul>
+      <li>支持主流浏览器：Chrome、Firefox、Safari、Edge</li>
+      <li>响应式设计，适配移动端和桌面端</li>
+    </ul>
+    
+    <h4>3.3 体验要求</h4>
+    <ul>
+      <li>简洁直观的用户界面</li>
+      <li>流畅的动画效果</li>
+      <li>清晰的视觉层次</li>
+      <li>友好的错误提示</li>
+    </ul>
+    
+    <h3>四、技术架构</h3>
+    
+    <h4>4.1 前端技术</h4>
+    <ul>
+      <li>React</li>
+      <li>Tailwind CSS</li>
+      <li>React Router</li>
+    </ul>
+    
+    <h4>4.2 后端技术</h4>
+    <ul>
+      <li>Python</li>
+      <li>FastAPI</li>
+      <li>LangChain</li>
+      <li>大语言模型API</li>
+    </ul>
+    
+    <h4>4.3 数据存储</h4>
+    <ul>
+      <li>用户数据：MongoDB</li>
+      <li>行程方案：MongoDB</li>
+      <li>偏好数据：MongoDB</li>
+    </ul>
+    
+    <h3>五、版本规划</h3>
+    
+    <h4>V1.0 核心功能</h4>
+    <ul>
+      <li>需求输入与方案生成</li>
+      <li>基础方案调整</li>
+      <li>简单行程管理</li>
+    </ul>
+    
+    <h4>V1.1 功能增强</h4>
+    <ul>
+      <li>高级方案调整</li>
+      <li>详细的个人中心</li>
+      <li>行程执行与打卡</li>
+    </ul>
+    
+    <h4>V1.2 高级功能</h4>
+    <ul>
+      <li>多城市支持</li>
+      <li>社交分享功能</li>
+      <li>AI学习与优化</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.project-doc {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.doc-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.doc-nav a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.doc-nav a:hover {
+  background-color: #f0f0f0;
+  color: #0066cc;
+}
+
+.doc-content h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+}
+
+.doc-content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.doc-content h4 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.doc-content p {
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.doc-content ul {
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.doc-content li {
+  margin-bottom: 8px;
+}
+</style>
