@@ -13,136 +13,353 @@ title: AI Weekend - PRD文档
   </div>
   
   <div class="doc-content">
-    <h2>AI Weekend - PRD文档</h2>
+    <h2>AI Weekend 智能周末行程规划产品需求文档（PRD）</h2>
     
-    <h3>一、产品概述</h3>
+    <h3>1. 文档基础信息</h3>
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+      <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">项目</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">内容</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">产品名称</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">AI Weekend（智能周末行程规划工具）</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">产品版本</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">V1.0</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">文档版本</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">V1.0</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">目标用户</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">追求个性化、高效周末出行规划的城市年轻群体</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">核心价值</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">基于AI算法快速生成个性化、可微调的周末行程方案</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">文档目的</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">明确产品功能、交互逻辑、视觉规范，指导研发与设计落地</td>
+      </tr>
+    </table>
     
-    <h4>1.1 产品定位</h4>
-    <p>AI Weekend是一款面向城市年轻群体的AI驱动型周末出行决策工具，聚焦解决用户周末出行规划耗时久、方案同质化、需求匹配度低的核心痛点，打造轻量化、个性化的周末出行规划体验。</p>
+    <h3>2. 产品概述</h3>
     
-    <h4>1.2 核心价值</h4>
+    <h4>2.1 产品定位</h4>
+    <p>AI Weekend 是一款面向城市年轻用户的移动端轻应用（H5），核心解决用户周末出行规划耗时、方案同质化、难以匹配个人偏好的问题。通过AI算法分析用户偏好，快速生成「两天一夜」为核心的周末行程方案，并支持个性化微调，覆盖「行程规划-方案调整-个人记录」全流程。</p>
+    
+    <h4>2.2 核心目标</h4>
+    <ol>
+      <li>降低用户周末出行规划的时间成本，1分钟内生成个性化行程方案；</li>
+      <li>提升行程方案的个性化与实用性，匹配用户的出行强度、预算、兴趣偏好；</li>
+      <li>建立用户出行偏好库，持续优化AI推荐精准度。</li>
+    </ol>
+    
+    <h4>2.3 产品核心流程</h4>
+    <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+用户触发生成（首页）→ AI加载生成方案（加载页）→ 展示行程方案（方案页）→ 微调需求（调整页）→ 重新生成/执行行程 → 个人中心记录行程
+    </pre>
+    
+    <h3>3. 功能模块详细需求</h3>
+    
+    <h4>3.1 首页（index.html）</h4>
+    <h5>3.1.1 核心功能</h5>
+    <p>作为产品入口，承载「快速生成行程」核心操作，同时展示热门目的地、用户历史偏好，降低用户决策成本。</p>
+    
+    <h5>3.1.2 页面结构与交互要求</h5>
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+      <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">模块</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">功能描述</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">交互规则</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">状态栏</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">展示时间（14:20）、信号、Wi-Fi、电量图标</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">仅展示，无交互</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">头部信息区</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">产品名称（AI Weekend）、日期（2026年3月9日，周一）、用户头像</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击用户头像跳转至「个人中心（profile.html）」</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">核心功能卡片</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">文案引导（"想去哪儿放松？"）、标签快捷选择、"快速提问"按钮</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">1. 标签（城市漫步/自然露营/网红咖啡/艺术画展）点击后高亮，支持多选；<br>2. 点击"快速提问"按钮跳转至「加载页（loading.html）」</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">热门出发地</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">展示上海/杭州/苏州（图片+名称+关注人数）、"更多"入口</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">1. 横向滑动展示更多城市；<br>2. 点击城市卡片触发该城市的行程生成，跳转加载页；<br>3. 点击"更多"展示全量热门城市列表</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">历史偏好区</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">展示用户之前喜欢的地点（共青国家森林公园/龙美术馆）</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击列表项跳转至对应地点的行程方案生成页（加载页）</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">底部导航栏</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">探索（当前页）、收藏、行程、我的</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">1. 点击"探索"保持当前页；<br>2. 点击"收藏"跳转收藏列表页；<br>3. 点击"行程"跳转行程管理页；<br>4. 点击"我的"跳转个人中心（profile.html）</td>
+      </tr>
+    </table>
+    
+    <h5>3.1.3 视觉规范</h5>
+    <ol>
+      <li>核心功能卡片采用「从靛蓝到紫色」的渐变背景，圆角3xl（24px），文字为白色；</li>
+      <li>标签样式：白色半透明背景（opacity 0.3），圆角，hover时opacity提升至0.5；</li>
+      <li>热门城市卡片：宽度32px，高度40px，图片圆角2xl（16px），文字层级为"城市名称（粗体）+ 关注人数（浅灰小字）"；</li>
+      <li>底部导航栏：毛玻璃效果（bg-white/90 + backdrop-blur-md），当前页图标/文字为靛蓝色（indigo-600），其余为灰色（gray-400）。</li>
+    </ol>
+    
+    <h4>3.2 AI方案加载页（loading.html）</h4>
+    <h5>3.2.1 核心功能</h5>
+    <p>模拟AI生成行程的过程，通过进度条、状态提示降低用户等待焦虑，最终自动跳转至行程方案页。</p>
+    
+    <h5>3.2.2 页面结构与交互要求</h5>
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+      <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">模块</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">功能描述</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">交互规则</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">加载动效区</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">魔法棒图标（脉冲动画）、文案（"AI正在编织方案"）、状态列表</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">状态列表按"已完成-进行中-待完成"展示，进行中项有弹跳动画</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">进度条</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">动态加载的渐变进度条（靛蓝到紫色）、百分比文字</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">1. 进度从10%开始，随机递增（每次5-20%），400ms/次；<br>2. 进度到100%后，500ms自动跳转至方案页（solution.html）；<br>3. 百分比文字同步更新</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">底部版权信息</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">"Powered by Weekend AI Model v4.0"</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">仅展示，无交互</td>
+      </tr>
+    </table>
+    
+    <h5>3.2.3 视觉规范</h5>
+    <ol>
+      <li>魔法棒图标容器：圆形（24x24），靛蓝浅背景（bg-indigo-50），脉冲动画（pulse-logo）；</li>
+      <li>进度条：宽度48px，高度1.5px，圆角全角，进度条为渐变背景（from-indigo-500 to-purple-500）；</li>
+      <li>状态列表：已完成项为浅靛蓝背景+对勾图标，进行中项为浅靛蓝背景+弹跳动画，待完成项为灰色+透明度30%。</li>
+    </ol>
+    
+    <h4>3.3 行程方案页（solution.html）</h4>
+    <h5>3.3.1 核心功能</h5>
+    <p>展示AI生成的完整行程方案（以上海静安区"两天一夜"为例），包含行程时间轴、AI贴士，支持「调整需求」和「开始行程」操作。</p>
+    
+    <h5>3.3.2 页面结构与交互要求</h5>
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+      <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">模块</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">功能描述</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">交互规则</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">头部图片区</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">行程背景图、返回按钮、分享/收藏图标、行程标题（静安艺术漫步之周末）、标签</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">1. 点击返回按钮跳转首页；<br>2. 点击分享图标触发分享弹窗；<br>3. 点击收藏图标切换收藏状态</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">标签区</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">艺术展览/精品咖啡/多巴胺多色标签</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击标签可筛选行程中对应类别的项目</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">行程时间轴</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">Day1行程（Brunch/UCCA Edge/下午茶），含时间、描述、图片</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">1. 时间轴线条仅展示至最后一项；<br>2. 点击行程项可展开详情（如地址、导航、预订入口）；<br>3. 图片点击可放大查看</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">AI旅行贴士</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">个性化建议（避开人流、提前预约）</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">仅展示，无交互</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">底部操作栏</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">"调整需求"按钮、"开始行程"按钮</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">1. 点击"调整需求"跳转调整页（adjust.html）；<br>2. 点击"开始行程"跳转行程执行页（如导航、计时）</td>
+      </tr>
+    </table>
+    
+    <h5>3.3.3 视觉规范</h5>
+    <ol>
+      <li>时间轴节点：第一项为实心靛蓝圆+白色图标，其余为白色圆+靛蓝边框+图标；</li>
+      <li>行程卡片：浅灰背景（bg-gray-50），圆角2xl（16px），内边距4px；</li>
+      <li>AI贴士区：浅靛蓝背景（bg-indigo-50），边框为indigo-100，圆角2xl；</li>
+      <li>底部按钮：<br> - 调整需求：浅灰背景，hover时加深；<br> - 开始行程：靛蓝背景（indigo-600），点击时缩放（active:scale-95），带阴影。</li>
+    </ol>
+    
+    <h4>3.4 需求调整页（adjust.html）</h4>
+    <h5>3.4.1 核心功能</h5>
+    <p>支持用户微调行程偏好，包括行程强度、兴趣标签、预算、避坑选项，调整后可重新生成方案。</p>
+    
+    <h5>3.4.2 页面结构与交互要求</h5>
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+      <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">模块</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">功能描述</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">交互规则</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">头部</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">关闭按钮、标题（微调方案）</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击关闭按钮返回方案页（solution.html）</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">行程强度调节</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">滑块（特种兵-适中-躺平），当前为"Citywalk模式"（2/3位置）</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">1. 拖动滑块切换行程强度，实时更新右侧标签；<br>2. 滑块释放后即时预览强度对应的行程变化（可选）</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">偏好标签微调</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">艺术/购物/美食/拍照/自然标签，当前选中"艺术""拍照"</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击标签切换选中状态（选中：靛蓝背景+白色文字；未选中：浅灰背景+灰色文字）</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">预算偏好</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">平价优先/品质平衡/奢华享受，当前选中"品质平衡"</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击选项卡切换选中状态（选中：靛蓝边框+浅靛蓝背景；未选中：灰色边框）</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">避坑/不想去</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">文本输入框（提示：不去人多的商场，不去网红连锁店...）</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">支持输入自定义避坑需求，最多输入200字</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">底部提交按钮</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">"重新生成方案"按钮</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击后跳转加载页（loading.html），基于新偏好重新生成方案</td>
+      </tr>
+    </table>
+    
+    <h5>3.4.3 视觉规范</h5>
+    <ol>
+      <li>强度滑块：背景为gray-100，进度条为indigo-500，滑块为白色圆+靛蓝边框，阴影效果；</li>
+      <li>预算选项：卡片式布局，选中项边框为indigo-500，背景为indigo-50/30；</li>
+      <li>避坑输入区：浅红背景（bg-red-50），边框为red-100，输入框占位符为浅红色（red-200）；</li>
+      <li>提交按钮：黑色背景（bg-gray-900），白色文字，点击时缩放（active:scale-95）。</li>
+    </ol>
+    
+    <h4>3.5 个人中心页（profile.html）</h4>
+    <h5>3.5.1 核心功能</h5>
+    <p>展示用户个人信息、行程统计、功能入口，是用户管理行程与偏好的核心页面。</p>
+    
+    <h5>3.5.2 页面结构与交互要求</h5>
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+      <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">模块</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">功能描述</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">交互规则</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">头部背景区</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">渐变背景（靛蓝到紫色）、设置图标</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击设置图标跳转设置页（账号、隐私、通知等）</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">用户资料卡</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">头像、昵称（周末探索者 · Alex）、解锁城市数、会员标识</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击头像可更换/查看大图；点击会员标识跳转会员升级页</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">统计区</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">收藏夹（24）、已完成（8）、足迹（1.2w km）</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击统计项跳转对应详情页（如收藏夹列表、已完成行程、足迹地图）</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">功能列表</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">历史行程、AI偏好库、会员特权</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">1. 点击"历史行程"跳转30天行程记录页；<br>2. 点击"AI偏好库"跳转偏好管理页；<br>3. 点击"会员特权"跳转会员权益页</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">会员升级卡片</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">Weekend Plus（AI语音导览、地图伴随）</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">点击"立即升级"跳转会员购买页</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">底部导航栏</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">探索、收藏、行程、我的（当前页）</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">同首页导航栏交互规则</td>
+      </tr>
+    </table>
+    
+    <h5>3.5.3 视觉规范</h5>
+    <ol>
+      <li>头部背景：渐变（from-indigo-600 to-purple-700），叠加低透明度几何图案；</li>
+      <li>用户资料卡：白色背景，圆角3xl，阴影+边框（gray-100）；</li>
+      <li>统计区：三列布局，中间项带左右边框（gray-100），文字层级为"数字（粗体）+ 说明（小字大写）"；</li>
+      <li>功能列表项：浅灰背景（bg-gray-50），hover时对应色系背景（如AI偏好库hover为orange-50），右侧箭头随hover变色；</li>
+      <li>会员卡片：渐变背景（from-gray-900 to-gray-700），白色文字，按钮为白色背景+黑色文字。</li>
+    </ol>
+    
+    <h3>4. 非功能需求</h3>
+    
+    <h4>4.1 性能需求</h4>
+    <ol>
+      <li>页面加载：所有页面首屏加载时间≤1.5s，图片懒加载；</li>
+      <li>交互响应：按钮点击、滑块拖动等交互响应时间≤100ms；</li>
+      <li>兼容性：适配主流移动端浏览器（Chrome、Safari、微信内置浏览器），支持375px宽度的移动端适配。</li>
+    </ol>
+    
+    <h4>4.2 体验需求</h4>
+    <ol>
+      <li>动效：核心操作（生成方案、提交调整、点击按钮）需有轻量级动效（缩放、渐变、弹跳），提升反馈感；</li>
+      <li>文案：所有文案简洁、口语化，符合年轻用户认知（如"特种兵""躺平""多巴胺多色"）；</li>
+      <li>容错：输入框内容为空时，提交按钮禁用并提示；跳转失败时，展示友好的错误提示并提供返回选项。</li>
+    </ol>
+    
+    <h4>4.3 数据需求</h4>
+    <ol>
+      <li>用户行为：记录用户点击的标签、调整的行程强度、预算偏好，用于优化AI推荐模型；</li>
+      <li>行程数据：存储用户生成的行程方案、完成状态，支持30天内历史记录查询；</li>
+      <li>隐私：用户头像、足迹等数据仅本地存储/加密传输，支持一键清空。</li>
+    </ol>
+    
+    <h3>5. 版本规划</h3>
+    
+    <h4>5.1 V1.0 核心功能（本期）</h4>
+    <ol>
+      <li>首页快速生成行程；</li>
+      <li>AI方案加载页；</li>
+      <li>行程方案展示页；</li>
+      <li>需求调整页；</li>
+      <li>个人中心基础功能。</li>
+    </ol>
+    
+    <h4>5.2 V1.1 迭代功能（下期）</h4>
+    <ol>
+      <li>行程执行页（导航、计时、打卡）；</li>
+      <li>收藏/分享功能；</li>
+      <li>足迹地图可视化；</li>
+      <li>会员权益落地；</li>
+      <li>多城市/多天数行程支持。</li>
+    </ol>
+    
+    <h3>6. 附录</h3>
+    
+    <h4>6.1 视觉规范参考</h4>
+    <p>所有页面基于Tailwind CSS实现，核心色系：</p>
     <ul>
-      <li>效率提升：将传统数小时的行程规划时间缩短至1分钟</li>
-      <li>个性化体验：基于用户偏好生成高度定制化的出行方案</li>
-      <li>全流程覆盖：从需求输入到行程执行的完整闭环</li>
-      <li>轻量化操作：降低用户操作成本，提升使用便捷性</li>
+      <li>主色：靛蓝（indigo-500/600）、紫色（purple-600/700）；</li>
+      <li>辅助色：橙色（orange-50/500）、蓝色（blue-50/600）、红色（red-50/700）；</li>
+      <li>中性色：白色、浅灰（gray-50/100）、深灰（gray-700/800/900）。</li>
     </ul>
     
-    <h4>1.3 目标用户</h4>
-    <p>城市年轻群体，包括上班族、学生等需要在周末进行休闲出行的用户。</p>
-    
-    <h3>二、核心功能模块</h3>
-    
-    <h4>2.1 首页</h4>
+    <h4>6.2 图标规范</h4>
+    <p>所有图标使用Iconify库，统一尺寸/风格：</p>
     <ul>
-      <li>产品介绍与核心价值展示</li>
-      <li>快速开始按钮</li>
-      <li>用户登录/注册入口</li>
-      <li>历史方案快捷访问</li>
-    </ul>
-    
-    <h4>2.2 需求输入页</h4>
-    <ul>
-      <li>自然语言输入框：支持用户用自然语言描述出行需求</li>
-      <li>标签选择：城市、时长、人数、预算范围、兴趣标签等</li>
-      <li>智能补全：根据用户输入提供相关建议</li>
-      <li>需求确认与提交</li>
-    </ul>
-    
-    <h4>2.3 方案生成页</h4>
-    <ul>
-      <li>AI生成进度展示</li>
-      <li>时间轴式行程方案展示</li>
-      <li>方案详情：时间、地点、活动、交通、餐饮等</li>
-      <li>方案调整入口</li>
-      <li>方案收藏与分享</li>
-    </ul>
-    
-    <h4>2.4 方案调整页</h4>
-    <ul>
-      <li>行程强度调整：特种兵/适中/躺平</li>
-      <li>兴趣标签调整</li>
-      <li>预算偏好调整</li>
-      <li>避坑需求设置</li>
-      <li>AI重新生成方案</li>
-    </ul>
-    
-    <h4>2.5 个人中心</h4>
-    <ul>
-      <li>历史行程管理</li>
-      <li>收藏方案管理</li>
-      <li>AI偏好库管理</li>
-      <li>用户设置</li>
-    </ul>
-    
-    <h3>三、非功能需求</h3>
-    
-    <h4>3.1 性能要求</h4>
-    <ul>
-      <li>页面加载时间≤2s</li>
-      <li>AI方案生成时间≤60s</li>
-      <li>支持同时1000+用户在线</li>
-    </ul>
-    
-    <h4>3.2 兼容性要求</h4>
-    <ul>
-      <li>支持主流浏览器：Chrome、Firefox、Safari、Edge</li>
-      <li>响应式设计，适配移动端和桌面端</li>
-    </ul>
-    
-    <h4>3.3 体验要求</h4>
-    <ul>
-      <li>简洁直观的用户界面</li>
-      <li>流畅的动画效果</li>
-      <li>清晰的视觉层次</li>
-      <li>友好的错误提示</li>
-    </ul>
-    
-    <h3>四、技术架构</h3>
-    
-    <h4>4.1 前端技术</h4>
-    <ul>
-      <li>React</li>
-      <li>Tailwind CSS</li>
-      <li>React Router</li>
-    </ul>
-    
-    <h4>4.2 后端技术</h4>
-    <ul>
-      <li>Python</li>
-      <li>FastAPI</li>
-      <li>LangChain</li>
-      <li>大语言模型API</li>
-    </ul>
-    
-    <h4>4.3 数据存储</h4>
-    <ul>
-      <li>用户数据：MongoDB</li>
-      <li>行程方案：MongoDB</li>
-      <li>偏好数据：MongoDB</li>
-    </ul>
-    
-    <h3>五、版本规划</h3>
-    
-    <h4>V1.0 核心功能</h4>
-    <ul>
-      <li>需求输入与方案生成</li>
-      <li>基础方案调整</li>
-      <li>简单行程管理</li>
-    </ul>
-    
-    <h4>V1.1 功能增强</h4>
-    <ul>
-      <li>高级方案调整</li>
-      <li>详细的个人中心</li>
-      <li>行程执行与打卡</li>
-    </ul>
-    
-    <h4>V1.2 高级功能</h4>
-    <ul>
-      <li>多城市支持</li>
-      <li>社交分享功能</li>
-      <li>AI学习与优化</li>
+      <li>功能图标：material-symbols（线性）、solar（面性）；</li>
+      <li>尺寸：text-xs/text-sm/text-xl/text-2xl/text-5xl，根据场景适配；</li>
+      <li>交互：hover时变色，点击时微缩。</li>
     </ul>
   </div>
 </div>
